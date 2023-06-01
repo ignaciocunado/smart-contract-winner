@@ -7,15 +7,15 @@
 const hre = require("hardhat");
 
 async function main() {
-  const contractAddress = 0xcF469d3BEB3Fc24cEe979eFf83BE33ed50988502;
-  const Contract = await hre.ethers.getContractFactory("Contract");
-  const contract = await Lock.deploy();
+  const contractAddress = "0xcF469d3BEB3Fc24cEe979eFf83BE33ed50988502";
+  const EmitEventWinner = await hre.ethers.getContractFactory("EmitEventWinner");
+  const emitEventWinner = await EmitEventWinner.deploy();
 
-  await lock.deployed();
+  await emitEventWinner.deployed();
 
-  console.log("Contract is deployed to " + contract.address);
+  console.log("Contract is deployed to " + emitEventWinner.address);
 
-  await contract.sendData(contractAddress);
+  await emitEventWinner.sendData(contractAddress);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
